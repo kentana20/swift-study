@@ -98,6 +98,17 @@ class ViewController: UIViewController {
             println("indexOf メロンは fruits にはありません")
         }
         
+        // 関数
+        var dbl : Int = doubleValue(2)
+        println("double result1: \(dbl)")
+        dbl = doubleValue(dbl)
+        println("double result2: \(dbl)")
+        
+        noRetFunc(5)
+       
+        let (age, name) = profileInfo()
+        println("age: \(age) ::: name: \(name)")
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -106,5 +117,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func doubleValue(x: Int) -> Int {
+        return 2 * x
+    }
 
+    func noRetFunc(y: Int) {  // 戻り値がない場合はVoidの記述は省略できる
+        println("y : \(y)")
+    }
+    
+    func profileInfo() -> (Int, String) {
+        return (20, "Mutta")
+    }
 }
