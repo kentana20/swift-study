@@ -1,3 +1,4 @@
+#!/usr/bin/swift
 let days = 31
 let firstDay = 2
 var w = 0

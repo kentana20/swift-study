@@ -1,3 +1,4 @@
+#!/usr/bin/swift
 var n = 7
 repeat {
     print("\(n) ", terminator:"")
