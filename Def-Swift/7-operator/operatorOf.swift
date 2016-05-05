@@ -23,3 +23,24 @@ var b = true
 var c1 = b || odd(1)  // oddは実行されない
 var c2 = !b && odd(3) // oddは実行されない
 
+// パターンマッチ演算子
+enum Rank : Int {
+    case Ace = 1, Two, Three, Four, Five, Six, Seven,
+    Eight, Nine, Ten, Jack, Queen, King
+}
+
+// 実体型の値と等しい時もマッチしたものとする
+func ~= (p:Int, r:Rank) -> Bool {
+    return p == r.rawValue
+}
+
+let hand:[Rank] = [ .Queen, .Ace, .Ten, .Six, .King, .Jack ]
+for card in hand {
+    switch card {
+    case 1: print("Ace")
+    case 13: print("King")
+    case .Queen: print("Queen")
+    default: print(".")
+    }
+}
+
